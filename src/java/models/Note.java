@@ -40,7 +40,6 @@ public class Note implements Serializable{
     public void setNoteContent(String noteContent) {
         this.noteContent = noteContent;
     }
-  
-    
+   
    
 }
