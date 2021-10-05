@@ -12,34 +12,35 @@ import java.io.Serializable;
  * @author seanz
  */
 public class Note implements Serializable{
-    private String noteTitle;
-    private String noteContent;
+    private String title;
+    private String content;
+    
+    public Note(){
+    }
+    
 
-    public Note() {
-        this.noteTitle = "";
-        this.noteContent= "";
+    public Note(String title, String content) {
+        this.title = title;
+        this.content = content;
     }
 
-    public Note(String noteTitle, String noteContent) {
-        this.noteTitle = noteTitle;
-        this.noteContent = noteContent;
+    public String getTitle() {
+        return title;
     }
 
-    public String getNoteTitle() {
-        return noteTitle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public void setNoteTitle(String noteTitle) {
-        this.noteTitle = noteTitle;
+    public String getContent() {
+        return content;
     }
 
-    public String getNoteContent() {
-        return noteContent;
+    public void setContent(String content) {
+        this.content = content;
     }
-
-    public void setNoteContent(String noteContent) {
-        this.noteContent = noteContent;
-    }
-   
+    
+    
+ 
    
 }

@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,10 +17,12 @@
         <h2>View Note</h2>
         <div>
         <p><b>Title: </b> 
-            ${note.noteTitle}
+        <p name="noteTitle">
+            ${note.title}</p>
         <br></p>
         <p><b>Contents: </b>
-        ${note.noteContent}
+        <p name="noteContent">
+            ${note.content}</p>
         <p><a href="note?edit">Edit</a></p>
         </div>
     </body>

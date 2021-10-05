@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,16 +18,16 @@
         <form method = "POST" action = "note">
         <div>
         <p><b>Title: </b>
-        <input type="text" name="note_title" value = "${note.title}">
+        <input type="text" name="title_edit" value = "${note.title}">
             ${note.title}
         <br></p>
         <p><b>Contents: </b>
         <br>
-        <textarea name="note_content" value = "${note.content}"></textarea></p>
+        <textarea name="content_edit" value = "${note.content}"></textarea></p>
         ${note.content}
         <p><a href="note?edit">Edit</a></p>
         </div>
-        <input type="submit">
+        <input type="submit" value="Save">
         </form>
     </body>
 </html>
