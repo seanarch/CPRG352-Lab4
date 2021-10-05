@@ -19,6 +19,16 @@ public class NoteServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        String path = getServletContext().getRealPath("/WEB-INF/note.txt");
+        BufferedReader br = new BufferedReader(new FileReader(new File(path)));
+        String noteTitle = br.readLine();
+        String noteContent = br.readLine();
+        
+        Note note = new Note(noteTitle, noteContent);
+        
+        request.setAttribute("note", note);
+        
         // this will have the servlet call upon a JSP to be loaded by the client's browser
         getServletContext().getRequestDispatcher("/WEB-INF/viewnote.jsp").forward(request,response);
         // stop the code call
