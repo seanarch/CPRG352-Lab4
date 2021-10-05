@@ -19,12 +19,12 @@
         <div>
         <p><b>Title: </b>
         <input type="text" name="title_edit" value = "${note.title}">
-            ${note.title}
+            
         <br></p>
         <p><b>Contents: </b>
         <br>
-        <textarea name="content_edit" value = "${note.content}"></textarea></p>
-        ${note.content}
+        <textarea name="content_edit" value = "">${note.content}</textarea></p>
+         
         <p><a href="note?edit">Edit</a></p>
         </div>
         <input type="submit" value="Save">
